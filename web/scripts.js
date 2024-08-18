@@ -1,20 +1,24 @@
 var attivaSound = false;
+var sound = new Audio('sound.mp3');  
+sound.volume = 0.3;
 
 window.addEventListener('message', function(event) {
-    var sound = new Audio('sound.mp3');
-    sound.volume = 0.3;
+    var action = event.data.action;
+    var message = event.data.message;
 
-    if (event.data.action === 'open') {
+    if (action === 'open') {
         $("body").fadeIn(400);
-        $(".contenitore_testo").text("" + event.data.message + "");
+        $(".contenitore_testo").text(message);
 
         if (!attivaSound) {
             sound.play();
             attivaSound = true;
         }
 
-    } else if (event.data.action === 'close') {
+    } else if (action === 'close') {
         $("body").fadeOut(400);
         attivaSound = false;
+        sound.pause(); 
+        sound.currentTime = 0;
     }
 });
