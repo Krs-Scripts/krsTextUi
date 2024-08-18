@@ -3,14 +3,14 @@
 
 
 ```lua
--- Open
+* Open
 exports.krsTextUi:Open('[E] - Interact')
 
--- Close
+* Close
 exports.krsTextUi:Close()
 
 
--- es_extended/client/function
+* es_extended/client/function
 function ESX.TextUI(message)
     exports.krsTextUi:Open(message)
 end
@@ -20,7 +20,7 @@ function ESX.HideUI()
 end
 
 * Test 
-```lua
+
 local point = lib.points.new({
     coords = vector3(-46.5240, -1112.0457, 26.4358),
     distance = 3,
