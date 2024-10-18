@@ -1,27 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap');
-
-
 body {
     -webkit-user-select: none;
     user-select: none;
     color: #ccc;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     overflow: hidden;
 }
 
-.menu {
+.contenitore {
     display: flex;
     align-items: center;
     justify-content: flex-start;
     position: absolute;
     top: 50%;
-    right: 5%; 
+    right: 1%; 
     width: 15vw;
-    height: 6vh;
+    height: 4vh;
     transform: translateY(-50%); 
     background-color: #1f1f1f;
+    filter: drop-shadow(0 10px 8px rgba(20, 20, 20, 0.062)) drop-shadow(0 4px 4px rgb(37, 37, 39));
     padding: 10px;
-    border-radius: 1vh;
+    border-radius: 2vh;
     overflow: hidden; 
 	
 }
@@ -30,23 +27,24 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     background-color: #1864ab2c;
     color: #71b4f3;
     font-size: 24px;
     font-weight: bold;
-    border-radius: 1vh;
+    font-family: "Montserrat", sans-serif;
+    border-radius: 1.5vh;
     margin-right: 3vh; 
 }
 
 .contenitore_testo {
-
     color: #b8b8b8;
-    font-size: 4vh;
-	font-size: 24px;
+    font-size: 24px; 
     font-weight: bold;
-    white-space: nowrap; 
-    overflow: hidden; 
-    text-overflow: ellipsis; 
+    font-family: "Montserrat", sans-serif;
+    overflow-wrap: break-word; 
+    word-wrap: break-word; 
+    white-space: normal; 
+    max-width: 80%; 
 }
