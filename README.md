@@ -21,26 +21,23 @@ end
 
 * Test 
 
-local point = lib.points.new({
-    coords = vector3(-46.5240, -1112.0457, 26.4358),
-    distance = 3,
+lib.zones.sphere({
+    coords = GetEntityCoords(cache.ped),
+    size = vec3(1.6, 1.4, 3.2),
+    rotation = 346.25,
+    debug = false,
+    onExit = function()
+        exports.krsTextUi:Close() 
+    end,
+    onEnter = function()
+        exports.krsTextUi:Open('Interact')
+    end,
+    inside = function()
+        if IsControlJustReleased(0, 38) then  
+            print('Test Marker')
+        end
+    end,
 })
- 
-function point:onEnter()
-    exports.krsTextUi:Open('Interact')
-end
- 
-function point:onExit()
-    exports.krsTextUi:Close()
-end
- 
-function point:nearby()
-    DrawMarker(0, self.coords.x, self.coords.y, self.coords.z, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0, 255, 255, 255, 255, false, true, 2, false, nil, nil, false)
- 
-    if self.currentDistance < 1 and IsControlJustReleased(0, 38) then
-        print('ciao')
-    end
-end
 ```
 
 
