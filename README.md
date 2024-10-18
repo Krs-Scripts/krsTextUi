@@ -41,5 +41,6 @@ lib.zones.sphere({
 ```
 
 
-![krsTextUi](https://github.com/user-attachments/assets/2da0d6e0-18d1-4c65-9f32-4960b80876e5)
+![Screenshot 2024-10-18 202121](https://github.com/user-attachments/assets/aefe90f3-a566-40e2-96c6-6346ae759cf3)
+
 
